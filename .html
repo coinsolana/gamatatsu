@@ -11,6 +11,7 @@
             background-color: #FFEE99;
             font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -22,6 +23,26 @@
             text-align: center;
             animation: bounce 1.5s infinite;
         }
+        p {
+            font-size: 1.2rem;
+            color: #555555;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #FFFFFF;
+            background-color: #FFAA00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+        button:hover {
+            background-color: #FF8800;
+        }
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -30,9 +51,22 @@
                 transform: translateY(-10px);
             }
         }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Token: BmztHwFQu44BYip8qqyUqLLh9qd2wGFb4GzhiUjpump</h1>
+    <p>Bem-vindo ao site! Este é um token exclusivo para você explorar.</p>
+    <button onclick="alert('Token Copiado!')">Copiar Token</button>
 </body>
 </html>
